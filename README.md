@@ -8,7 +8,7 @@
 - Alternatively, you can view the hosted website [here](mikhauct.github.io/furniture-store/), and find the source code [here](https://github.com/MikhaUCT/furniture-store).
 
 # Development Details
-- The website is built using (Svelte)[https://svelte.dev/], SCSS & Typescript.
+- The website is built using [SvelteKit](https://kit.svelte.dev/), SCSS & Typescript.
 - All CSS, HTML & Typescript was hand written by me. I also hand made all SVGs. CSS frameworks are for the weak ;)
 - The Search bar does not work because there was way too little time to implement it.
 - I started to make the site responsive to different screen sizes, but ran out of time. Fortunately there were no marks allocated for this.
