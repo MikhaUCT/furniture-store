@@ -27,5 +27,5 @@
 - 404
 
 # References
-- All images were custom generated using (dall-e)[https://labs.openai.com/]
-- Sections of the About, Contact, Privacy Policy & Terms and Conditions pages were generated using (chat GPT)[https://chat.openai.com/chat]
+- All product images were custom generated using [dall-e](https://labs.openai.com/)
+- Sections of the About, Contact, Privacy Policy & Terms and Conditions pages were generated using [chat GPT](https://chat.openai.com/chat).
