@@ -2,6 +2,7 @@
 	import CartItem from "$lib/CartItem.svelte";
 	import Empty from "$lib/Empty.svelte";
 	import { cart, totalItems } from "../../stores";
+	import { base } from "$app/paths";
 
 	$: items = [...$cart.contents];
 </script>
@@ -29,7 +30,7 @@
 					<span>Total:</span>
 					<span>R{$cart.total}</span>
 				</div>
-				<a href="/checkout" class="btn-primary">Proceed To Checkout</a>
+				<a href="{base}/checkout" class="btn-primary">Proceed To Checkout</a>
 			</div>
 		</div>
 	{:else}

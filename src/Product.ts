@@ -1,3 +1,5 @@
+import { base } from "$app/paths";
+
 class UUIDGenerator {
 	static #index = 10000;
 	static next() {
@@ -31,7 +33,7 @@ export class Product {
 		this.price = price;
 		this.stock = stock;
 		this.description = description;
-		this.image = image;
+		this.image = base + image;
 		this.reviews = reviews;
 		this.selected = 0;
 		for (const category of categories) {

@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { base } from "$app/paths";
+</script>
+
 <div class="empty">
 	<svg viewBox="0 0 120 120">
 		<path
@@ -5,7 +9,7 @@
 		/>
 	</svg>
 	<span>Your shopping cart is empty</span>
-	<a href="/home" class="btn-primary">Back To Home Page</a>
+	<a href="{base}/home" class="btn-primary">Back To Home Page</a>
 </div>
 
 <style lang="scss">

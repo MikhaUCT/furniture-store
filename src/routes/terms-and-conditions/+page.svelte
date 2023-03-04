@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { base } from "$app/paths";
+</script>
+
 <svelte:head>
 	<title>FFFF | Ts & Cs</title>
 </svelte:head>
@@ -65,7 +69,8 @@
 
 <p>
 	Thank you for shopping at Fuzzy Fred's Fabulous Furniture online store. If you have any
-	questions or concerns about these terms and conditions, please <a href="/contact">contact us</a
+	questions or concerns about these terms and conditions, please <a href="{base}/contact"
+		>contact us</a
 	>.
 </p>
 

@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { base } from "$app/paths";
+</script>
+
 <svelte:head>
 	<title>FFFF | Privacy Policy</title>
 </svelte:head>
@@ -21,7 +25,7 @@
 	including sharing it with third-party partners for marketing or other purposes.
 </p>
 <p>
-	If you have any questions or concerns about our privacy policy, please <a href="/contact"
+	If you have any questions or concerns about our privacy policy, please <a href="{base}/contact"
 		>contact us</a
 	>. By using our website, you agree to our collection and use of your information as described in
 	this policy.

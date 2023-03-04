@@ -1,11 +1,12 @@
 <script lang="ts">
 	import { goto } from "$app/navigation";
+	import { base } from "$app/paths";
 
 	let query = "";
 
 	function onKeydown(e: KeyboardEvent) {
 		if (e.key === "Enter") {
-			goto(`/search?q=${encodeURI(query)}`);
+			goto(`${base}/search?q=${encodeURI(query)}`);
 			query = "";
 		}
 	}

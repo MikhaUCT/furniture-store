@@ -2,12 +2,13 @@
 	import type { Product } from "../Product";
 	import AddToCart from "./AddToCart.svelte";
 	import Rating from "./Rating.svelte";
+	import { base } from "$app/paths";
 
 	export let product: Product;
 </script>
 
 <div class="product">
-	<a href="./product/#{product.id}"
+	<a href="{base}/product/#{product.id}"
 		><img src={product.image} alt={product.name} loading="lazy" /></a
 	>
 	<ul class="details">

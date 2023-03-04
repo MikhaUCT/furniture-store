@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { createEventDispatcher } from "svelte";
 	import { Categories } from "../Product";
+	import { base } from "$app/paths";
 
 	export let highlight: string | null = "";
 
@@ -10,7 +11,7 @@
 <div class="categories">
 	{#each Object.keys(Categories) as category}
 		<a
-			href="/category/#{category}"
+			href="{base}/category/#{category}"
 			class="category"
 			class:highlight={highlight?.toLowerCase() === category.toLowerCase()}
 			on:click={() => dispatch("select", category)}
