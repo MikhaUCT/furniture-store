@@ -17,6 +17,7 @@
 - About
 - Cart
 - Category (page for each category)
+- Checkout
 - Contact
 - Home
 - Privacy Policy
