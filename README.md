@@ -5,7 +5,7 @@
 - Go to `localhost:5173` in your browser to view the website, or press `o` in the terminal where you ran `npm run dev`.
 
 
-- Alternatively, you can view the hosted website [here](mikhauct.github.io/furniture-store/), and find the source code [here](https://github.com/MikhaUCT/furniture-store).
+- Alternatively, you can view the hosted website [here](https://mikhauct.github.io/furniture-store/), and find the source code [here](https://github.com/MikhaUCT/furniture-store).
 
 # Development Details
 - The website is built using [SvelteKit](https://kit.svelte.dev/), SCSS & Typescript.
