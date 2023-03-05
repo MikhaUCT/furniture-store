@@ -19,6 +19,9 @@
 </button>
 
 <style lang="scss">
+	button {
+		width: 100%;
+	}
 	button:hover svg {
 		fill: var(--bg-01);
 	}

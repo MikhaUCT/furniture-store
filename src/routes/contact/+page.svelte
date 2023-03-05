@@ -68,6 +68,9 @@
 			border-color: var(--accent-00);
 		}
 	}
+	input {
+		width: 100%;
+	}
 	.flipper {
 		transform-style: preserve-3d;
 		perspective: 100rem;
