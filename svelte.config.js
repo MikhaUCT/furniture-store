@@ -11,6 +11,10 @@ const config = {
 		adapter: adapter(),
 		paths: {
 			base: dev ? "" : "/furniture-store",
+			relative: false,
+		},
+		prerender: {
+			handleMissingId: "ignore",
 		}
 	}
 };
