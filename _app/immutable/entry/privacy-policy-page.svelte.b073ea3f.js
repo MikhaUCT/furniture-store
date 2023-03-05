@@ -1,4 +1,4 @@
-import{S as Q,i as D,s as G,a as v,k as f,q as i,Q as J,h as o,c as b,l as h,m,r as n,n as K,b as s,E as a,H as I}from"../chunks/index.e90e152c.js";import{b as L}from"../chunks/paths.555b91fb.js";function M(C){let u,l,g,w,c,E,_,y,W,k,p,x,P,r,z,d,q,H;return{c(){u=v(),l=f("h3"),g=i("Privacy Policy"),w=v(),c=f("p"),E=i(`At Fuzzy Fred's Fabulous Furniture online store, we take your privacy seriously. We collect
+import{S as Q,i as D,s as G,a as v,k as f,q as i,Q as J,h as o,c as b,l as h,m,r as n,n as K,b as s,E as a,H as I}from"../chunks/index.e90e152c.js";import{b as L}from"../chunks/paths.42a7a617.js";function M(C){let u,l,g,w,c,E,_,y,W,k,p,x,P,r,z,d,q,H;return{c(){u=v(),l=f("h3"),g=i("Privacy Policy"),w=v(),c=f("p"),E=i(`At Fuzzy Fred's Fabulous Furniture online store, we take your privacy seriously. We collect
 	information about you through various means, such as cookies, server logs, and tracking pixels.
 	This includes information about your device, such as your IP address, browser type, and
 	operating system, as well as your browsing behavior, such as the pages you visit, the products
