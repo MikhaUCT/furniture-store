@@ -11,7 +11,7 @@
 <div class="categories">
 	{#each Object.keys(Categories) as category}
 		<a
-			href="{base}/category/#{category}"
+			href="{base}/category#{category}"
 			class="category"
 			class:highlight={highlight?.toLowerCase() === category.toLowerCase()}
 			on:click={() => dispatch("select", category)}

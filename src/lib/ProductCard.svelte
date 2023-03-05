@@ -8,7 +8,7 @@
 </script>
 
 <div class="product">
-	<a href="{base}/product/#{product.id}"
+	<a href="{base}/product#{product.id}"
 		><img src={product.image} alt={product.name} loading="lazy" /></a
 	>
 	<ul class="details">
