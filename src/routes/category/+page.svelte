@@ -19,17 +19,20 @@
 	<title>FFFF | {category ?? "Category"}</title>
 </svelte:head>
 
-{#if products != null}
-	<h3>{category}</h3>
-	<div class="products">
-		{#each [...products] as product (product.id)}
-			<ProductCard {product} />
-		{/each}
-	</div>
-	<CategoriesElement highlight={category} on:select={(e) => (category = e.detail)} />
-{:else}
-	<Loading />
-{/if}
+<section class="aside-section">
+	<aside class="card hide-at-medium">
+		<CategoriesElement highlight={category} on:select={(e) => (category = e.detail)} />
+	</aside>
+	{#if products != null}
+		<div class="products">
+			{#each [...products] as product (product.id)}
+				<ProductCard {product} />
+			{/each}
+		</div>
+	{:else}
+		<Loading />
+	{/if}
+</section>
 
 <style>
 	.products {

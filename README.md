@@ -26,7 +26,34 @@
 - Terms & Conditions
 - /
 - 404
+## Responsive design system
+There are 3 screen sizes:
+- Small (max-width: 480px)
+- Medium (max-width: 760px)
+- Large (min-width: 760px)
+- Elements can be easily hidden or shown at different screen sizes using the responsive design system classes.
+  - Elements without any of the responsive design system classes will be shown at all screen sizes.
+  - `hide-at-medium` will hide the element at the medium screen sizes and smaller.
+  - `hide-at-small` will hide the element at the small screen sizes.
+  - `show-at-medium` will show the element at the medium screen sizes and smaller.
+  - `show-at-small` will show the element at the small screen sizes.
+
+# Accessibility
+- All custom animations respect the `prefers-reduced-motion` media query.
 
 # References
 - All product images were custom generated using [dall-e](https://labs.openai.com/)
 - Sections of the About, Contact, Privacy Policy & Terms and Conditions pages were generated using [chat GPT](https://chat.openai.com/chat).
+
+<details>
+<summary><strong>Desired Features<strong></summary>
+
+- Functional search bar
+- Fancy credit card details input
+- Hamburger menu
+- Responsive search bar
+- Related items on product pages
+- responsive product pages
+- More advanced category system with subcategories
+- Comment filtering
+</details>

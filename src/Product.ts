@@ -25,6 +25,7 @@ export class Product {
 	stock: number;
 	description: string[];
 	image: string;
+	categories: (keyof typeof Categories)[];
 	reviews: Review[];
 	/** The quantity of this item selected by the customer */
 	selected: number;
@@ -36,6 +37,7 @@ export class Product {
 		this.image = base + image;
 		this.reviews = reviews;
 		this.selected = 0;
+		this.categories = categories;
 		for (const category of categories) {
 			Categories[category].add(this);
 		}
@@ -78,13 +80,10 @@ export class Product {
 	}
 }
 
-export class Review {
-	comment: string | undefined;
-	rating: number;
-	userName: string;
-	constructor(rating: number, userName: string, comment?: string) {
-		this.comment = comment;
-		this.rating = rating;
-		this.userName = userName;
-	}
+export function Review(rating: number, username: string, comment?: string): Review {
+	return {
+		comment,
+		rating,
+		username,
+	};
 }

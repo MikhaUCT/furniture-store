@@ -1,5 +1,4 @@
 <script lang="ts">
-	import type { Review } from "../Product";
 	import Stars from "./Stars.svelte";
 
 	export let review: Review;
@@ -10,7 +9,7 @@
 		<div class="stars">
 			<Stars rating={review.rating} />
 		</div>
-		<div class="name">{review.userName}</div>
+		<div class="name">{review.username}</div>
 	</div>
 	{#if review.comment}
 		{review.comment}

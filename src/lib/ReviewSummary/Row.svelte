@@ -1,11 +1,11 @@
 <script lang="ts">
-	import Stars from "$lib/Stars.svelte";
+	import Stars from "../Stars.svelte";
 
 	export let num: number;
 	export let reviews: number;
 	export let total: number = 0;
 
-	$: width = (reviews / total) * 100;
+	$: width = total === 0 ? 0 : (reviews / total) * 100;
 
 	let color = (() => {
 		switch (num) {
@@ -35,6 +35,10 @@
 		display: flex;
 		align-items: center;
 		gap: 1rem;
+		cursor: pointer;
+		&:hover {
+			background-color: var(--bg-00);
+		}
 	}
 	.num {
 		font-size: 1.4rem;

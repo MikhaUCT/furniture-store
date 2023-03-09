@@ -3,7 +3,7 @@
 	import { Categories } from "../Product";
 	import { base } from "$app/paths";
 
-	export let highlight: string | null = "";
+	export let highlight: string | null = null;
 
 	const dispatch = createEventDispatcher();
 </script>
@@ -19,19 +19,15 @@
 			{category}
 		</a>
 	{/each}
+	{#if highlight != null}
+		<a href="{base}/home" class="category">All <span class="light">(Home Page)</span></a>
+	{/if}
 </div>
 
 <style lang="scss">
 	.categories {
 		display: flex;
 		flex-direction: column;
-		background-color: var(--bg-02);
-		position: absolute;
-		left: 0;
-		top: 11rem;
-		box-shadow: var(--shadow);
-		border-radius: var(--border-radius);
-		min-width: 20rem;
 		text-transform: capitalize;
 	}
 	.category {
@@ -48,5 +44,8 @@
 	}
 	.highlight {
 		font-weight: bold;
+	}
+	.light {
+		color: var(--fg-02);
 	}
 </style>

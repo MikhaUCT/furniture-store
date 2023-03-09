@@ -15,15 +15,15 @@ export const products = writable<Product[]>([
 		],
 		"/img/office-chair.png",
 		[
-			new Review(5, "Brian Murphy", "This chair is great!"),
-			new Review(1, "Brennan Lee Mulligan", "This chair is the worst thing to ever disgrace my office!"),
-			new Review(3, "Emily Axford", "This chair is okay!"),
-			new Review(4, "Allie Beardsly"),
-			new Review(5, "Zach Oyama"),
-			new Review(4, "Pat Cassels"),
-			new Review(5, "Sam Reich"),
-			new Review(5, "Josh Ruben"),
-			new Review(5, "Siobhan Thompson"),
+			Review(5, "Brian Murphy", "This chair is great!"),
+			Review(1, "Brennan Lee Mulligan", "This chair is the worst thing to ever disgrace my office!"),
+			Review(3, "Emily Axford", "This chair is okay!"),
+			Review(4, "Allie Beardsly"),
+			Review(5, "Zach Oyama"),
+			Review(4, "Pat Cassels"),
+			Review(5, "Sam Reich"),
+			Review(5, "Josh Ruben"),
+			Review(5, "Siobhan Thompson"),
 		]
 	),
 	new Product(
@@ -38,13 +38,13 @@ export const products = writable<Product[]>([
 		],
 		"/img/simple-chair.png",
 		[
-			new Review(4, "Rekha Shankar", "You get what you pay for."),
-			new Review(3, "Brennan Lee Mulligan", "This chair is okay. Uncomfortable after a while."),
-			new Review(1, "Dan Gurewitch", "Broke after 2 days. The fact that I weigh 180kg has nothing to do with it."),
-			new Review(1, "Adam Conover", "Rather pay a bit more and get a more comfortable chair. This is one is not worth the money."),
-			new Review(2, "Streeter Seidell", "Returned after a few days. Too low for my desk."),
-			new Review(4, "Emily Axford"),
-			new Review(3, "Raphael Chestang"),
+			Review(4, "Rekha Shankar", "You get what you pay for."),
+			Review(3, "Brennan Lee Mulligan", "This chair is okay. Uncomfortable after a while."),
+			Review(1, "Dan Gurewitch", "Broke after 2 days. The fact that I weigh 180kg has nothing to do with it."),
+			Review(1, "Adam Conover", "Rather pay a bit more and get a more comfortable chair. This is one is not worth the money."),
+			Review(2, "Streeter Seidell", "Returned after a few days. Too low for my desk."),
+			Review(4, "Emily Axford"),
+			Review(3, "Raphael Chestang"),
 		]
 	),
 	new Product(
@@ -60,14 +60,14 @@ export const products = writable<Product[]>([
 		],
 		"/img/gaming-chair.png",
 		[
-			new Review(5, "Mike Trapp", "I have never been more comfortable in my life. This chair is fantastic. Now I can play fortnight for a fortnight."),
-			new Review(1, "Leroy Jenkins", "This chair didn't make me better at a single game. Returned."),
-			new Review(5, "Katie Marovitch", "Bought it for my husband. He loves it. Very comfortable."),
-			new Review(4, "Grant O'Brien", "A bit expensive, but worth it."),
-			new Review(5, "Caldwell Tanner"),
-			new Review(5, "Brennan Lee Mulligan"),
-			new Review(5, "Josh Ruben"),
-			new Review(5, "Siobhan Thompson"),
+			Review(5, "Mike Trapp", "I have never been more comfortable in my life. This chair is fantastic. Now I can play fortnight for a fortnight."),
+			Review(1, "Leroy Jenkins", "This chair didn't make me better at a single game. Returned."),
+			Review(5, "Katie Marovitch", "Bought it for my husband. He loves it. Very comfortable."),
+			Review(4, "Grant O'Brien", "A bit expensive, but worth it."),
+			Review(5, "Caldwell Tanner"),
+			Review(5, "Brennan Lee Mulligan"),
+			Review(5, "Josh Ruben"),
+			Review(5, "Siobhan Thompson"),
 		]
 	),
 	new Product(
@@ -83,7 +83,7 @@ export const products = writable<Product[]>([
 		],
 		"/img/armchair.png",
 		[
-			new Review(1, "Karen Anoy Yang", "I cannot believe you would sell a leather product on this site. Don't you know that leather is made from the skin of animals? I am disgusted. I bought this chair just so I could comment this. Very comfortable though."),
+			Review(1, "Karen Anoy Yang", "I cannot believe you would sell a leather product on this site. Don't you know that leather is made from the skin of animals? I am disgusted. I bought this chair just so I could comment this. Very comfortable though."),
 		]
 	),
 	new Product(
@@ -99,11 +99,11 @@ export const products = writable<Product[]>([
 		],
 		"/img/white-kitchen-chair.png",
 		[
-			new Review(5, "Brennan Lee Mulligan", "These chairs are fantastic. I bought 4 of them and they look great in my kitchen."),
-			new Review(3, "Rekha Shankar", "I bought 2 of these chairs and they are okay. Nothing special."),
-			new Review(3, "Dan Gurewitch", "I bought 6 and one of them came broken. The rest are fine."),
-			new Review(4, "Emily Axford"),
-			new Review(4, "Brian Murphy"),
+			Review(5, "Brennan Lee Mulligan", "These chairs are fantastic. I bought 4 of them and they look great in my kitchen."),
+			Review(3, "Rekha Shankar", "I bought 2 of these chairs and they are okay. Nothing special."),
+			Review(3, "Dan Gurewitch", "I bought 6 and one of them came broken. The rest are fine."),
+			Review(4, "Emily Axford"),
+			Review(4, "Brian Murphy"),
 		]
 	),
 	new Product(
@@ -120,10 +120,10 @@ export const products = writable<Product[]>([
 		],
 		"/img/cream-kitchen-chair.png",
 		[
-			new Review(1, "Marissa High", "Whoever thought fabric kitchen chairs was a good idea is an idiot. I bought 4 of these and they are a nightmare to clean. I will never buy fabric chairs again."),
-			new Review(3, "Oren Brimer", "Comfortable, but they get dirty very easily."),
-			new Review(3, "Mitch Magee"),
-			new Review(4, "Will Hines"),
+			Review(1, "Marissa High", "Whoever thought fabric kitchen chairs was a good idea is an idiot. I bought 4 of these and they are a nightmare to clean. I will never buy fabric chairs again."),
+			Review(3, "Oren Brimer", "Comfortable, but they get dirty very easily."),
+			Review(3, "Mitch Magee"),
+			Review(4, "Will Hines"),
 		]
 	),
 	new Product(
@@ -139,8 +139,8 @@ export const products = writable<Product[]>([
 		],
 		"/img/black-couch.png",
 		[
-			new Review(5, "Dan Eckman", "Very high quality. Even came with some coins under the seat."),
-			new Review(5, "Ryan Moulton"),
+			Review(5, "Dan Eckman", "Very high quality. Even came with some coins under the seat."),
+			Review(5, "Ryan Moulton"),
 		]
 	),
 	new Product(
@@ -171,11 +171,11 @@ export const products = writable<Product[]>([
 		],
 		"/img/analog-clock.png",
 		[
-			new Review(4, "Kevin Corrigan", "I bought this clock for my kitchen. It looks great and is very easy to read."),
-			new Review(4, "Jeff Rubin", "Does what is is supposed to do."),
-			new Review(2, "Dan Meth", "Can't change the speed to fit my fast paced lifestyle. Returned."),
-			new Review(4, "Brennan Lee Mulligan"),
-			new Review(4, "Josh Ruben"),
+			Review(4, "Kevin Corrigan", "I bought this clock for my kitchen. It looks great and is very easy to read."),
+			Review(4, "Jeff Rubin", "Does what is is supposed to do."),
+			Review(2, "Dan Meth", "Can't change the speed to fit my fast paced lifestyle. Returned."),
+			Review(4, "Brennan Lee Mulligan"),
+			Review(4, "Josh Ruben"),
 		]
 	),
 	new Product(
@@ -191,9 +191,9 @@ export const products = writable<Product[]>([
 		],
 		"/img/wall-clock.png",
 		[
-			new Review(4, "Veronica Rodriguez", "I bought this clock for my living room. It is bigger than it looks in the picture."),
-			new Review(4, "Connie Spircy", "Is it just me or does this clock have an extra hand?"),
-			new Review(5, "Julia Bales"),
+			Review(4, "Veronica Rodriguez", "I bought this clock for my living room. It is bigger than it looks in the picture."),
+			Review(4, "Connie Spircy", "Is it just me or does this clock have an extra hand?"),
+			Review(5, "Julia Bales"),
 		]
 	),
 	new Product(
@@ -209,8 +209,8 @@ export const products = writable<Product[]>([
 		],
 		"/img/copper-pots.png",
 		[
-			new Review(5, "Kevin Etherson", "Just bought these, they look great in my rustic kitchen."),
-			new Review(1, "Rebekka Johnson", "The tin scrapes off into the food. My entire family got severely ill. DO NOT BUY."),
+			Review(5, "Kevin Etherson", "Just bought these, they look great in my rustic kitchen."),
+			Review(1, "Rebekka Johnson", "The tin scrapes off into the food. My entire family got severely ill. DO NOT BUY."),
 		]
 	),
 	new Product(
@@ -226,9 +226,9 @@ export const products = writable<Product[]>([
 		],
 		"/img/stainless-steel-pots.png",
 		[
-			new Review(5, "Rebekka Johnson", "Definitely better than the copper ones."),
-			new Review(5, "Chris Capel"),
-			new Review(4, "Tom A. Capps")
+			Review(5, "Rebekka Johnson", "Definitely better than the copper ones."),
+			Review(5, "Chris Capel"),
+			Review(4, "Tom A. Capps")
 		]
 	),
 	new Product(
@@ -243,11 +243,11 @@ export const products = writable<Product[]>([
 		],
 		"/img/knife-set.png",
 		[
-			new Review(4, "Amber Schaefer", "Very good quality knives. The block is nice and heavy. 4/5 because it says there are 5 knives but there are only 4."),
-			new Review(1, "Stoney Sharp", "Cut my finger off when I was opening the box. I will never buy knives online again."),
-			new Review(3, "Tom A. Capps", "Too expensive for what you get."),
-			new Review(5, "Ben Weinstein"),
-			new Review(4, "Milana Vayntrub"),
+			Review(4, "Amber Schaefer", "Very good quality knives. The block is nice and heavy. 4/5 because it says there are 5 knives but there are only 4."),
+			Review(1, "Stoney Sharp", "Cut my finger off when I was opening the box. I will never buy knives online again."),
+			Review(3, "Tom A. Capps", "Too expensive for what you get."),
+			Review(5, "Ben Weinstein"),
+			Review(4, "Milana Vayntrub"),
 		]
 	),
 	new Product(
@@ -262,9 +262,9 @@ export const products = writable<Product[]>([
 		],
 		"/img/plates.png",
 		[
-			new Review(2, "Stoney Sharp", "These plates are very fragile. I dropped one and it shattered into a million pieces."),
-			new Review(4, "Tom A. Capps", "Good value for the price."),
-			new Review(5, "Ben Weinstein"),
+			Review(2, "Stoney Sharp", "These plates are very fragile. I dropped one and it shattered into a million pieces."),
+			Review(4, "Tom A. Capps", "Good value for the price."),
+			Review(5, "Ben Weinstein"),
 		]
 	),
 	new Product(
@@ -280,9 +280,9 @@ export const products = writable<Product[]>([
 		],
 		"/img/hexagon-shelves.png",
 		[
-			new Review(5, "Breanna Yde", "I bought these shelves for my drunk bee themed bar. They look great!"),
-			new Review(4, "Adam Catino", "A bit odd looking, but they do the job."),
-			new Review(4, "Tom A. Capps"),
+			Review(5, "Breanna Yde", "I bought these shelves for my drunk bee themed bar. They look great!"),
+			Review(4, "Adam Catino", "A bit odd looking, but they do the job."),
+			Review(4, "Tom A. Capps"),
 		]
 	),
 	new Product(
@@ -298,8 +298,8 @@ export const products = writable<Product[]>([
 		],
 		"/img/wacky-shelves.png",
 		[
-			new Review(5, "Jay Buim", "Super strange looking. I love it"),
-			new Review(3, "Brian Murphy", "The section at the top seems a bit flimsy. We'll see how it holds up."),
+			Review(5, "Jay Buim", "Super strange looking. I love it"),
+			Review(3, "Brian Murphy", "The section at the top seems a bit flimsy. We'll see how it holds up."),
 		]
 	),
 	new Product(
@@ -315,9 +315,9 @@ export const products = writable<Product[]>([
 		],
 		"/img/throw-cushions.png",
 		[
-			new Review(5, "Breanna Yde", "I bought these cushions for my drunk bee themed bar. They go great with the hexagon shelves!"),
-			new Review(4, "Adam Catino", "A strange design, but they are very comfortable."),
-			new Review(3, "Stoney Sharp", "I somehow managed to stub my toe on these. I'm not sure how."),
+			Review(5, "Breanna Yde", "I bought these cushions for my drunk bee themed bar. They go great with the hexagon shelves!"),
+			Review(4, "Adam Catino", "A strange design, but they are very comfortable."),
+			Review(3, "Stoney Sharp", "I somehow managed to stub my toe on these. I'm not sure how."),
 		]
 	),
 	new Product(
@@ -332,8 +332,8 @@ export const products = writable<Product[]>([
 		],
 		"/img/cushions.png",
 		[
-			new Review(4, "Jay Buim"),
-			new Review(3, "Mike Trapp"),
+			Review(4, "Jay Buim"),
+			Review(3, "Mike Trapp"),
 		]
 	),
 	new Product(
@@ -366,8 +366,8 @@ export const products = writable<Product[]>([
 		],
 		"/img/kitchen-table.png",
 		[
-			new Review(3, "Karen Anoy Yang", "Finally, something I can buy with a clear conscience."),
-			new Review(2, "Stoney Sharp", "I bought this table for my patio, but it got ruined when it rained. On the plus side, the fancy wood makes great kindling."),
+			Review(3, "Karen Anoy Yang", "Finally, something I can buy with a clear conscience."),
+			Review(2, "Stoney Sharp", "I bought this table for my patio, but it got ruined when it rained. On the plus side, the fancy wood makes great kindling."),
 		]
 	)
 ]);

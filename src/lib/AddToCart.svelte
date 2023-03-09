@@ -21,6 +21,7 @@
 <style lang="scss">
 	button {
 		width: 100%;
+		height: fit-content;
 	}
 	button:hover svg {
 		fill: var(--bg-01);

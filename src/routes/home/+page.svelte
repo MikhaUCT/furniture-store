@@ -8,12 +8,16 @@
 	<title>FFFF | Home</title>
 </svelte:head>
 
-<div class="products">
-	{#each $products as product (product.id)}
-		<ProductCard {product} />
-	{/each}
-</div>
-<Categories />
+<section class="aside-section">
+	<aside class="card hide-at-medium">
+		<Categories />
+	</aside>
+	<div class="products">
+		{#each $products as product (product.id)}
+			<ProductCard {product} />
+		{/each}
+	</div>
+</section>
 
 <style>
 	.products {
@@ -21,6 +25,5 @@
 		flex-wrap: wrap;
 		gap: 1rem;
 		justify-content: center;
-		align-items: center;
 	}
 </style>

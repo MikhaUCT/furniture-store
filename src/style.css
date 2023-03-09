@@ -44,12 +44,6 @@ body {
 	grid-template-rows: 10rem 1fr;
 }
 
-main {
-	max-height: 100%;
-	overflow-y: auto;
-	scroll-behavior: smooth;
-}
-
 textarea {
 	background-color: inherit;
 	color: inherit;
@@ -89,4 +83,24 @@ textarea {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
+}
+
+.card {
+	background-color: var(--bg-01);
+	box-shadow: var(--shadow);
+	border-radius: var(--border-radius);
+	padding: 1.5rem;
+}
+
+.aside-section {
+	display: grid;
+	grid-template-columns: 24rem 1fr;
+	gap: 1rem;
+}
+
+aside {
+	height: fit-content;
+	min-height: 90vh;
+	position: sticky;
+	top: 1rem;
 }

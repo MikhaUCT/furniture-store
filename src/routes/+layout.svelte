@@ -1,23 +1,36 @@
 <script lang="ts">
-	import Categories from "$lib/Categories.svelte";
+	import "../style.css";
+	import "../mobile.css";
 	import SearchBar from "$lib/SearchBar.svelte";
 	import { fly } from "svelte/transition";
 	import { totalItems } from "../stores";
 	import { base } from "$app/paths";
+	import MikhaDavidsLogo from "$lib/MikhaDavidsLogo.svelte";
+	import { afterNavigate } from "$app/navigation";
+	import Logo from "$lib/Logo.svelte";
+	import HamburgerMenu from "$lib/HamburgerMenu.svelte";
+	let scrolled: HTMLElement;
+
+	afterNavigate(() => {
+		// @ts-ignore (TS is complaining about behavior "instant", which is a valid value)
+		scrolled.scrollTo({ behavior: "instant", top: 0 });
+	});
 </script>
 
 <nav>
 	<div class="nav-top">
+		<span class="show-at-medium">
+			<HamburgerMenu />
+		</span>
 		<a href="{base}/home">
-			<!-- svelte-ignore a11y-missing-content -->
-			<h1 />
+			<Logo />
 		</a>
-		<div class="details">
+		<div class="details hide-at-medium">
 			<a href="{base}/home">Home</a>
 			<a href="{base}/about">About</a>
 			<a href="{base}/contact">Contact</a>
-			<a href="{base}/privacy-policy">Privacy Policy</a>
-			<a href="{base}/terms-and-conditions">Ts & Cs</a>
+			<a href="{base}/privacy-policy">Privacy</a>
+			<a href="{base}/terms-and-conditions">Ts&nbsp;&&nbsp;Cs</a>
 		</div>
 	</div>
 	<div class="nav-bottom">
@@ -34,13 +47,16 @@
 		</a>
 	</div>
 </nav>
-<main>
-	<div class="content">
+<section bind:this={scrolled}>
+	<main>
 		<slot />
-	</div>
-</main>
+	</main>
+	<footer>
+		<div>Designed and created by Mikha Davids</div>
+		<MikhaDavidsLogo />
+	</footer>
+</section>
 
-<!-- <Categories /> -->
 <style lang="scss">
 	a {
 		text-decoration: none;
@@ -76,26 +92,32 @@
 		box-shadow: 0 0 1rem #0002;
 		background-color: var(--bg-01);
 	}
+	section {
+		max-height: 100%;
+		overflow-y: auto;
+		scroll-behavior: smooth;
+		display: flex;
+		flex-direction: column;
+	}
 	main {
-		padding-block: 1rem;
-	}
-	.content {
-		max-width: 81rem;
-		padding-inline: 2rem;
+		flex-grow: 1;
+		width: 100%;
+		max-width: 107rem;
+		padding: 1rem 2rem 5rem 2rem;
 		margin-inline: auto;
-	}
-	h1 {
-		&::before {
-			content: "Fuzzy Fred's Fabulous Furniture";
-		}
-		font-family: "Pacifico", cursive;
-		margin: 0;
 	}
 	.nav-top {
 		padding-inline: 3rem;
 		display: flex;
+		gap: 2rem;
 		justify-content: space-between;
 		align-items: center;
+		& > a {
+			display: flex;
+			flex: 1;
+			height: 4rem;
+			margin-top: 0.5rem;
+		}
 	}
 	.details {
 		display: flex;
@@ -124,9 +146,18 @@
 		justify-content: space-between;
 		// margin-left: calc((100% - 79rem) / 2);
 	}
-	@media (max-width: 770px) {
-		h1::before {
-			content: "FFFF";
-		}
+
+	footer {
+		background-color: var(--fg-00);
+		padding: 1rem 3rem;
+		color: var(--bg-00);
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		flex-direction: column;
+		gap: 1rem;
+		user-select: none;
 	}
 </style>
