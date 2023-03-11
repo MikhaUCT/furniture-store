@@ -48,12 +48,9 @@ There are 3 screen sizes:
 <details>
 <summary><strong>Desired Features<strong></summary>
 
-- Functional search bar
-- Fancy credit card details input
-- Hamburger menu
 - Responsive search bar
+- Fancy credit card details input
 - Related items on product pages
-- responsive product pages
 - More advanced category system with subcategories
 - Comment filtering
 </details>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Product } from "../../Product";
+	import type { Product } from "../../utils";
 	import Rating from "../Rating.svelte";
 	import Row from "./Row.svelte";
 

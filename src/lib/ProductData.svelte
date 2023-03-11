@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { Product } from "../Product";
+	import type { Product } from "../utils";
 	import AddToCart from "./AddToCart.svelte";
 	import Rating from "./Rating.svelte";
-	import ReviewSummary from "./ReviewSummary";
+	import ReviewSummary from "./ReviewSummary.svelte";
 	import ReviewList from "./ReviewList.svelte";
 	import { base } from "$app/paths";
 
@@ -23,23 +23,25 @@
 	<div>
 		<a href="{base}/category#{product.categories[0]}">{product.categories[0]}</a> > {product.name.toLowerCase()}
 	</div>
-	<div class="hero card">
+	<div class="hero card revert-grid-at-small">
 		<img src={product.image} alt={product.name} />
 		<div class="details">
-			<h2>{product.name}</h2>
+			<h2 class="hide-at-medium">{product.name}</h2>
+			<h3 class="show-at-medium">{product.name}</h3>
 			<Rating rating={product.getRating()} reviewCount={product.reviews.length} />
-			<h3>R{product.price}</h3>
+			<h3 class="hide-at-medium">R{product.price}</h3>
+			<h4 class="show-at-medium">R{product.price}</h4>
 			<div class="stock">{product.stock} In Stock</div>
 		</div>
 		<AddToCart {product} />
 	</div>
-	<div class="more card">
-		<ReviewSummary {product} />
+	<div class="more card revert-grid-at-small">
 		<div class="description">
 			{#each product.description as line}
 				<p>{line}</p>
 			{/each}
 		</div>
+		<ReviewSummary {product} />
 	</div>
 	<div class="reviews card">
 		<ReviewList
@@ -58,14 +60,13 @@
 	.hero {
 		display: grid;
 		grid-template-columns: 1fr 2fr;
-		grid-template-rows: 1fr 1fr;
+		grid-template-rows: 1fr auto;
 		gap: 2rem;
-		align-items: end;
+		align-items: start;
 	}
 	img {
 		width: 100%;
-		min-width: 30rem;
-		height: 100%;
+		min-width: 24rem;
 		object-fit: cover;
 		grid-row-start: 1;
 		grid-row-end: 3;
@@ -77,5 +78,16 @@
 	}
 	.reviews {
 		padding-block: 0;
+	}
+	.description {
+		order: 1;
+	}
+	@media (max-width: 600px) {
+		.more {
+			grid-template-columns: 1fr;
+		}
+		.description {
+			order: 0;
+		}
 	}
 </style>

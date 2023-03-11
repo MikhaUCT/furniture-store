@@ -1,3 +1,12 @@
+.ellipse-overflow {
+	box-orient: vertical;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
 @media (min-width: 760px) {
 	.show-at-medium {
 		display: none !important;
@@ -6,8 +15,8 @@
 
 
 @media (max-width: 760px) {
-	.aside-section {
-		grid-template-columns: 1fr;
+	.revert-grid-at-medium {
+		grid-template-columns: 1fr !important;
 	}
 
 	.hide-at-medium {
@@ -22,6 +31,10 @@
 }
 
 @media (max-width: 480px) {
+	.revert-grid-at-small {
+		grid-template-columns: 1fr !important;
+	}
+
 	.hide-at-small {
 		display: none !important;
 	}

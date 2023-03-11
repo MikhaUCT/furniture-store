@@ -11,7 +11,7 @@
 	<title>FFFF | Cart</title>
 </svelte:head>
 
-<h3>Shopping Cart</h3>
+<h3 class="page-label">Shopping Cart</h3>
 <div class="cart">
 	{#if items.length > 0}
 		<div class="order">
@@ -20,7 +20,7 @@
 					<CartItem {product} />
 				{/each}
 			</div>
-			<div class="summary">
+			<div class="summary card">
 				<h4>Order Summary</h4>
 				<div class="summary-item">
 					<span>Items:</span>
@@ -50,10 +50,6 @@
 		gap: 1rem;
 	}
 	.summary {
-		background-color: var(--bg-01);
-		box-shadow: var(--shadow);
-		border-radius: var(--border-radius);
-		padding: 1rem;
 		height: fit-content;
 		display: grid;
 		gap: 1rem;

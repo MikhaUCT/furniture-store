@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { fly } from "svelte/transition";
-	import type { Product } from "../Product";
+	import type { Product } from "../utils";
 	import { cart } from "../stores";
 
 	export let product: Product;

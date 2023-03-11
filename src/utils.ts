@@ -15,9 +15,56 @@ export const Categories = {
 	"furniture": new Set<Product>(),
 	"decor": new Set<Product>(),
 	"kitchenware": new Set<Product>(),
+	"gaming": new Set<Product>(),
 };
 
+// multi word search trie
+class SearchTrie<T> {
+	leaves: Map<string, SearchTrie<T>>;
+	end: boolean;
+	values: T[];
+	constructor(str?: string, value?: T) {
+		this.leaves = new Map<string, SearchTrie<T>>();
+		this.end = false;
+		this.values = [];
+		if (str != null) this.add(str, value!);
+	}
+	add(str: string, value: T) {
+		str = str.toLowerCase();
+		if (str.length === 0) {
+			this.end = true;
+			this.values.push(value);
+			return;
+		}
+		if (!this.leaves.has(str[0])) {
+			this.leaves.set(str[0], new SearchTrie(str.slice(1), value));
+		} else {
+			this.leaves.get(str[0])!.add(str.slice(1), value);
+		}
+	}
+	getResultsFor(str: string): T[] {
+		str = str.toLowerCase();
+		const results = [];
+		let node: SearchTrie<T> | undefined = this;
+		for (let i = 0; i < str.length; ++i) {
+			node = node.leaves.get(str[i]);
+			if (!node) return [];
+		}
+		results.push(...node.getValues());
+		return results;
+	}
+
+	getValues(): T[] {
+		const values = [...this.values];
+		for (const leaf of this.leaves.values()) {
+			values.push(...leaf.getValues());
+		}
+		return [...new Set(values)];
+	}
+}
+
 export class Product {
+	static nameTrie = new SearchTrie<Product>();
 	static #products: Map<string, Product> = new Map<string, Product>();
 	name: string;
 	id: string;
@@ -43,6 +90,11 @@ export class Product {
 		}
 		this.id = UUIDGenerator.next();
 		Product.#products.set(this.id, this);
+
+		const words = name.split(/\s+/);
+		for (let i = 0; i < words.length; ++i) {
+			Product.nameTrie.add(words.slice(i).join(" "), this);
+		}
 	}
 	static getProduct(id: string) {
 		return Product.#products.get(id);
@@ -77,6 +129,12 @@ export class Product {
 		n = Math.min(this.selected, n);
 		this.selected -= n;
 		return n;
+	}
+	toString() {
+		return this.name;
+	}
+	static search(str: string) {
+		return Product.nameTrie.getResultsFor(str.trim());
 	}
 }
 

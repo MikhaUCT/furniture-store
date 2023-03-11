@@ -1,30 +1,55 @@
 <script lang="ts">
 	import "../style.css";
 	import "../mobile.css";
-	import SearchBar from "$lib/SearchBar.svelte";
-	import { fly } from "svelte/transition";
-	import { totalItems } from "../stores";
-	import { base } from "$app/paths";
-	import MikhaDavidsLogo from "$lib/MikhaDavidsLogo.svelte";
-	import { afterNavigate } from "$app/navigation";
+	// Because all the data is just in a file on the front end & not in an actual database I need to
+	// import it here to make sure all the product objects are initialized on all pages
+	import { products } from "../data";
+	import { category, totalItems } from "../stores";
+
 	import Logo from "$lib/Logo.svelte";
-	import HamburgerMenu from "$lib/HamburgerMenu.svelte";
+	import Menu from "$lib/Menu.svelte";
+	import SearchBar from "$lib/SearchBar.svelte";
+	import Categories from "$lib/Categories.svelte";
+	import MikhaDavidsLogo from "$lib/MikhaDavidsLogo.svelte";
+	import HamburgerMenuButton from "$lib/HamburgerMenuButton.svelte";
+
+	import { fly } from "svelte/transition";
+	import { base } from "$app/paths";
+	import { afterNavigate } from "$app/navigation";
 	let scrolled: HTMLElement;
 
 	afterNavigate(() => {
 		// @ts-ignore (TS is complaining about behavior "instant", which is a valid value)
 		scrolled.scrollTo({ behavior: "instant", top: 0 });
 	});
+
+	let menuOpen = false;
 </script>
 
+<Menu bind:open={menuOpen}>
+	<div class="card menu-details">
+		<h3 class="menu-title">Pages</h3>
+		<a href="{base}/home">Home</a>
+		<a href="{base}/about">About</a>
+		<a href="{base}/contact">Contact</a>
+		<a href="{base}/privacy-policy">Privacy</a>
+		<a href="{base}/terms-and-conditions">Ts&nbsp;&&nbsp;Cs</a>
+	</div>
+	<div class="card">
+		<h3 class="menu-title">Categories</h3>
+		<Categories highlight={$category} on:select={(e) => ($category = e.detail)} />
+	</div>
+</Menu>
 <nav>
 	<div class="nav-top">
 		<span class="show-at-medium">
-			<HamburgerMenu />
+			<HamburgerMenuButton bind:open={menuOpen} />
 		</span>
 		<a href="{base}/home">
 			<Logo />
 		</a>
+		<!-- Filler element to push logo into the center (by balancing burger menu button) -->
+		<div class="show-at-small filler" />
 		<div class="details hide-at-medium">
 			<a href="{base}/home">Home</a>
 			<a href="{base}/about">About</a>
@@ -77,6 +102,7 @@
 		font-size: 1em;
 		text-decoration: none;
 		box-shadow: 0 0.25rem 0.5rem #0004;
+		transition: scale 0.1s ease-in-out;
 		&:hover {
 			scale: 1.1;
 		}
@@ -119,6 +145,9 @@
 			margin-top: 0.5rem;
 		}
 	}
+	.filler {
+		width: 2.5rem;
+	}
 	.details {
 		display: flex;
 		font-size: 1.2rem;
@@ -135,6 +164,22 @@
 		& > a:not(:first-child) {
 			border-left: 1px solid var(--fg-00);
 		}
+	}
+	.menu-details {
+		display: grid;
+		a {
+			padding: 1.5rem 1rem;
+			&:hover {
+				background-color: var(--fg-03);
+			}
+			&:not(:last-child) {
+				border-bottom: 1px solid var(--fg-03);
+			}
+		}
+	}
+	.menu-title {
+		margin-top: 0;
+		padding-left: 1rem;
 	}
 	.nav-bottom {
 		display: flex;

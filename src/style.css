@@ -92,10 +92,15 @@ textarea {
 	padding: 1.5rem;
 }
 
-.aside-section {
+.loading-container {
 	display: grid;
-	grid-template-columns: 24rem 1fr;
-	gap: 1rem;
+	place-items: center;
+	height: 80vh;
+	color: var(--accent-00);
+}
+
+.loading-container svg {
+	width: 80%;
 }
 
 aside {
@@ -103,4 +108,16 @@ aside {
 	min-height: 90vh;
 	position: sticky;
 	top: 1rem;
+}
+
+.products {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: center;
+}
+
+.page-label {
+	margin-block: 0 1rem;
+	text-align: center;
 }

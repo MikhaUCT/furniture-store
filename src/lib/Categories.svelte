@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { createEventDispatcher } from "svelte";
-	import { Categories } from "../Product";
+	import { Categories } from "../utils";
 	import { base } from "$app/paths";
+	import { page } from "$app/stores";
 
 	export let highlight: string | null = null;
 
@@ -9,6 +10,9 @@
 </script>
 
 <div class="categories">
+	{#if !$page.url.pathname.endsWith("/home")}
+		<a href="{base}/home" class="category">All <span class="light">(Home Page)</span></a>
+	{/if}
 	{#each Object.keys(Categories) as category}
 		<a
 			href="{base}/category#{category}"
@@ -19,9 +23,6 @@
 			{category}
 		</a>
 	{/each}
-	{#if highlight != null}
-		<a href="{base}/home" class="category">All <span class="light">(Home Page)</span></a>
-	{/if}
 </div>
 
 <style lang="scss">
@@ -31,7 +32,7 @@
 		text-transform: capitalize;
 	}
 	.category {
-		padding: 2rem 1rem;
+		padding: 1.5rem 1rem;
 		cursor: pointer;
 		color: var(--fg-00);
 		text-decoration: none;

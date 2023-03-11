@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { goto } from "$app/navigation";
-	import Loading from "$lib/Loading.svelte";
+	import Loading from "$lib/FFFF.svelte";
 	import { onMount } from "svelte";
 	import { base } from "$app/paths";
 
@@ -9,4 +9,6 @@
 	});
 </script>
 
-<Loading />
+<div class="loading-container">
+	<Loading />
+</div>
