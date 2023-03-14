@@ -1,0 +1,1 @@
+import{S as a,i as o,s as n,Z as r,h as c,F as e}from"../chunks/index.cb760050.js";function d(s){return{c(){this.h()},l(t){r("svelte-1fqqru0",document.head).forEach(c),this.h()},h(){document.title="FFFF | Delivery"},m:e,p:e,i:e,o:e,d:e}}class l extends a{constructor(t){super(),o(this,t,null,d,n,{})}}export{l as default};
