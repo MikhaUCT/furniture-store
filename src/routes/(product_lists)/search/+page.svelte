@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { base } from "$app/paths";
-	import { page } from "$app/stores";
 	import ProductCard from "$lib/ProductCard.svelte";
+	import { query } from "../../../stores";
 	import { Product } from "../../../utils";
-	$: query = $page.url.searchParams.get("q") ?? "";
-	$: results = Product.search(query);
+	// $: query = $page.url.searchParams.get("q") ?? "";
+	$: results = Product.search($query);
 </script>
 
 <svelte:head>
@@ -12,11 +12,11 @@
 </svelte:head>
 
 <div>
-	<h3 class="page-label">Search results for "{query}"</h3>
+	<h3 class="page-label">Search results for "{$query}"</h3>
 	<div class="products">
 		{#if results.length === 0}
 			<div class="card">
-				<p class="no-match">Nothing matched your search for "{query}".</p>
+				<p class="no-match">Nothing matched your search for "{$query}".</p>
 				<div class="tips">
 					<h3>Search Tips</h3>
 					<p>

@@ -45,3 +45,5 @@ export const totalItems = writable(0);
 export const cart = writable(new Cart());
 
 export const category = writable<keyof typeof Categories | null>(null);
+
+export const query = writable<string>("");

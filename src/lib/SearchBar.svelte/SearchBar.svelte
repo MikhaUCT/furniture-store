@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { goto } from "$app/navigation";
 	import { base } from "$app/paths";
+	import { query } from "../../stores";
 	import { Product } from "../../utils";
 	import SearchResult from "./SearchResult.svelte";
 
@@ -10,6 +11,7 @@
 
 	function search() {
 		goto(`${base}/search?q=${encodeURI(value)}`);
+		query.set(value);
 	}
 
 	function onKeydown(e: KeyboardEvent & { currentTarget: HTMLInputElement }) {
