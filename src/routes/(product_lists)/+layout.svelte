@@ -16,4 +16,11 @@
 		grid-template-columns: 24rem 1fr;
 		gap: 1rem;
 	}
+
+	aside {
+		height: fit-content;
+		min-height: 90vh;
+		position: sticky;
+		top: 1rem;
+	}
 </style>

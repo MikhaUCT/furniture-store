@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Product } from "../utils";
+	import { formatNumber, type Product } from "../utils";
 	import AddToCart from "./AddToCart.svelte";
 	import Rating from "./Rating.svelte";
 	import { base } from "$app/paths";
@@ -12,7 +12,7 @@
 		><img src={product.image} alt={product.name} loading="lazy" />
 		<ul class="details">
 			<li class="name ellipse-overflow">{product.name}</li>
-			<li class="price">R{product.price}</li>
+			<li class="price">R{formatNumber(product.price)}</li>
 			<li class="rating">
 				<Rating rating={product.getRating()} reviewCount={product.reviews.length} />
 			</li>

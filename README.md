@@ -10,9 +10,6 @@
 # Development Details
 - The website is built using [SvelteKit](https://kit.svelte.dev/), SCSS & Typescript.
 - All CSS, HTML & Typescript was hand written by me. I also hand made all SVGs. CSS frameworks are for the weak ;)
-- The Search bar does not work because there was way too little time to implement it.
-- I started to make the site responsive to different screen sizes, but ran out of time. Fortunately there were no marks allocated for this.
-- The checkout page is not to my standard. I ran out of time.
 ## Pages:
 - About
 - Cart
@@ -27,7 +24,7 @@
 - /
 - 404
 ## Responsive design system
-There are 3 screen sizes:
+There are 3 screen sizes, which are stored as scss variables:
 - Small (max-width: 480px)
 - Medium (max-width: 760px)
 - Large (min-width: 760px)
@@ -40,17 +37,20 @@ There are 3 screen sizes:
 
 # Accessibility
 - All custom animations respect the `prefers-reduced-motion` media query.
+- All pages are mobile friendly and adapt to any screen size
 
 # References
 - All product images were custom generated using [dall-e](https://labs.openai.com/)
 - Sections of the About, Contact, Privacy Policy & Terms and Conditions pages were generated using [chat GPT](https://chat.openai.com/chat).
+- All credit card logos come from [vector brand icons](https://worldvectorlogo.com/)
 
 <details>
 <summary><strong>Desired Features<strong></summary>
 
 - Responsive search bar
-- Fancy credit card details input
 - Related items on product pages
 - More advanced category system with subcategories
 - Comment filtering
+- Improve keyboard navigation
+- potential issue with things disappearing at 480px
 </details>

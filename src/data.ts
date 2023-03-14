@@ -12,7 +12,7 @@ export const products = [
 			"Classic swivel office chair with good lumbar support.",
 			"With a height-adjustable, swivel soft leather chair, this office chair will support your posture for those long hours at work."
 		],
-		"/img/office-chair.png",
+		"/product/office-chair.png",
 		[
 			Review(5, "Brian Murphy", "This chair is great!"),
 			Review(1, "Brennan Lee Mulligan", "This chair is the worst thing to ever disgrace my office!"),
@@ -35,7 +35,7 @@ export const products = [
 		[
 			"Simple, affordable desk chair with backrest & carry handle.",
 		],
-		"/img/simple-chair.png",
+		"/product/simple-chair.png",
 		[
 			Review(4, "Rekha Shankar", "You get what you pay for."),
 			Review(3, "Brennan Lee Mulligan", "This chair is okay. Uncomfortable after a while."),
@@ -58,7 +58,7 @@ export const products = [
 			"High back gaming chair with adjustable armrests.",
 			"This chair is designed with comfort in mind and supports your back and neck while you play your favorite games for hours on end."
 		],
-		"/img/gaming-chair.png",
+		"/product/gaming-chair.png",
 		[
 			Review(5, "Mike Trapp", "I have never been more comfortable in my life. This chair is fantastic. Now I can play fortnight for a fortnight."),
 			Review(1, "Leroy Jenkins", "This chair didn't make me better at a single game. Returned."),
@@ -81,7 +81,7 @@ export const products = [
 			"Luxurious black leather armchair with detatchable back cushion.",
 			"There is nothing better than coming home after a long hard day and sinking into this luxurious armchair."
 		],
-		"/img/armchair.png",
+		"/product/armchair.png",
 		[
 			Review(1, "Karen Anoy Yang", "I cannot believe you would sell a leather product on this site. Don't you know that leather is made from the skin of animals? I am disgusted. I bought this chair just so I could comment this. Very comfortable though."),
 		]
@@ -97,7 +97,7 @@ export const products = [
 		[
 			"Simple, elegant white kitchen chair with a backrest."
 		],
-		"/img/white-kitchen-chair.png",
+		"/product/white-kitchen-chair.png",
 		[
 			Review(5, "Brennan Lee Mulligan", "These chairs are fantastic. I bought 4 of them and they look great in my kitchen."),
 			Review(3, "Rekha Shankar", "I bought 2 of these chairs and they are okay. Nothing special."),
@@ -118,7 +118,7 @@ export const products = [
 			"Simple, elegant cream kitchen chair with a backrest.",
 			"Made from high quality materials, this chair is built to last."
 		],
-		"/img/cream-kitchen-chair.png",
+		"/product/cream-kitchen-chair.png",
 		[
 			Review(1, "Marissa High", "Whoever thought fabric kitchen chairs was a good idea is an idiot. I bought 4 of these and they are a nightmare to clean. I will never buy fabric chairs again."),
 			Review(3, "Oren Brimer", "Comfortable, but they get dirty very easily."),
@@ -138,7 +138,7 @@ export const products = [
 			"Made from high quality leather, this couch is extremely comfortable and will last for many years.",
 			"Very easy to clean."
 		],
-		"/img/black-couch.png",
+		"/product/black-couch.png",
 		[
 			Review(5, "Dan Eckman", "Very high quality. Even came with some coins under the seat."),
 			Review(5, "Ryan Moulton"),
@@ -155,7 +155,7 @@ export const products = [
 			"Very comfortable couch good with a unique design.",
 			"Good value, quality is best. No better couch in market. Buy now."
 		],
-		"/img/odd-couch.png",
+		"/product/odd-couch.png",
 		[]
 	),
 	new Product(
@@ -170,7 +170,7 @@ export const products = [
 			"Analogue clock with a black frame, black numbers and a white background.",
 			"Batteries not included."
 		],
-		"/img/analog-clock.png",
+		"/product/analog-clock.png",
 		[
 			Review(4, "Kevin Corrigan", "I bought this clock for my kitchen. It looks great and is very easy to read."),
 			Review(4, "Jeff Rubin", "Does what is is supposed to do."),
@@ -190,7 +190,7 @@ export const products = [
 			"Large wall clock with a simple elegant design.",
 			"Batteries not included. Please note that this clock is not waterproof, so please do not place it in the bathroom.",
 		],
-		"/img/wall-clock.png",
+		"/product/wall-clock.png",
 		[
 			Review(4, "Veronica Rodriguez", "I bought this clock for my living room. It is bigger than it looks in the picture."),
 			Review(4, "Connie Spircy", "Is it just me or does this clock have an extra hand?"),
@@ -208,7 +208,7 @@ export const products = [
 			"Classic copper pot set with 3 pots of different sizes and 2 saucepans.",
 			"Tin lining on the inside of the pots and pans to prevent food from coming into contact with the copper.",
 		],
-		"/img/copper-pots.png",
+		"/product/copper-pots.png",
 		[
 			Review(5, "Kevin Etherson", "Just bought these, they look great in my rustic kitchen."),
 			Review(1, "Rebekka Johnson", "The tin scrapes off into the food. My entire family got severely ill. DO NOT BUY."),
@@ -225,7 +225,7 @@ export const products = [
 			"Stainless steel pot set with 3 pots of different sizes.",
 			"Made from high quality stainless steel. Unlike copper, stainless steel is easy to clean and will not react with food.",
 		],
-		"/img/stainless-steel-pots.png",
+		"/product/stainless-steel-pots.png",
 		[
 			Review(5, "Rebekka Johnson", "Definitely better than the copper ones."),
 			Review(5, "Chris Capel"),
@@ -242,7 +242,7 @@ export const products = [
 		[
 			"Set of 5 high quality knives with a black marble knife block.",
 		],
-		"/img/knife-set.png",
+		"/product/knife-set.png",
 		[
 			Review(4, "Amber Schaefer", "Very good quality knives. The block is nice and heavy. 4/5 because it says there are 5 knives but there are only 4."),
 			Review(1, "Stoney Sharp", "Cut my finger off when I was opening the box. I will never buy knives online again."),
@@ -261,7 +261,7 @@ export const products = [
 		[
 			"Set of 10 white plates of varying sizes.",
 		],
-		"/img/plates.png",
+		"/product/plates.png",
 		[
 			Review(2, "Stoney Sharp", "These plates are very fragile. I dropped one and it shattered into a million pieces."),
 			Review(4, "Tom A. Capps", "Good value for the price."),
@@ -279,7 +279,7 @@ export const products = [
 			"Wacky hexagon wall shelves.",
 			"Made from high quality wood, these shelves are very sturdy and can hold a lot of weight.",
 		],
-		"/img/hexagon-shelves.png",
+		"/product/hexagon-shelves.png",
 		[
 			Review(5, "Breanna Yde", "I bought these shelves for my drunk bee themed bar. They look great!"),
 			Review(4, "Adam Catino", "A bit odd looking, but they do the job."),
@@ -297,7 +297,7 @@ export const products = [
 			"Funny looking wooden wall shelves.",
 			"What do you want from me, I've had to write so many of these at this point.",
 		],
-		"/img/wacky-shelves.png",
+		"/product/wacky-shelves.png",
 		[
 			Review(5, "Jay Buim", "Super strange looking. I love it"),
 			Review(3, "Brian Murphy", "The section at the top seems a bit flimsy. We'll see how it holds up."),
@@ -314,7 +314,7 @@ export const products = [
 			"Set of 2 throw cushions with a unique design.",
 			"Made from high quality cotton, these cushions are very comfortable, and can be machine washed.",
 		],
-		"/img/throw-cushions.png",
+		"/product/throw-cushions.png",
 		[
 			Review(5, "Breanna Yde", "I bought these cushions for my drunk bee themed bar. They go great with the hexagon shelves!"),
 			Review(4, "Adam Catino", "A strange design, but they are very comfortable."),
@@ -331,7 +331,7 @@ export const products = [
 		[
 			"Set of 8ish striped cushions with a black, white and yellow design.",
 		],
-		"/img/cushions.png",
+		"/product/cushions.png",
 		[
 			Review(4, "Jay Buim"),
 			Review(3, "Mike Trapp"),
@@ -349,7 +349,7 @@ export const products = [
 			"A Simple elegant coffee table made of reclaimed wood.",
 			"Not made for outdoor use.",
 		],
-		"/img/coffee-table.png",
+		"/product/coffee-table.png",
 		[]
 	),
 	new Product(
@@ -365,7 +365,7 @@ export const products = [
 			"For indoor or outdoor* use.",
 			"*Not recommended for outdoor use.",
 		],
-		"/img/kitchen-table.png",
+		"/product/kitchen-table.png",
 		[
 			Review(3, "Karen Anoy Yang", "Finally, something I can buy with a clear conscience."),
 			Review(2, "Stoney Sharp", "I bought this table for my patio, but it got ruined when it rained. On the plus side, the fancy wood makes great kindling."),

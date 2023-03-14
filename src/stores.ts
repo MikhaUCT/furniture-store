@@ -8,7 +8,7 @@ class Cart {
 		this.#items = 0;
 		this.contents = new Set<Product>();
 	}
-	public addProduct(product: Product, quantity: number) {
+	public addProduct(product: Product, quantity: number = 1) {
 		if (!this.contents.has(product)) {
 			this.contents.add(product);
 		}

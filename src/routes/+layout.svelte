@@ -1,6 +1,6 @@
 <script lang="ts">
-	import "../style.css";
-	import "../mobile.css";
+	import "../style.scss";
+	import "../mobile.scss";
 	// Because all the data is just in a file on the front end & not in an actual database I need to
 	// import it here to make sure all the product objects are initialized on all pages
 	import { products } from "../data";
@@ -60,7 +60,7 @@
 	</div>
 	<div class="nav-bottom">
 		<SearchBar />
-		<a href="{base}/cart" class="cart">
+		<a href="{base}/checkout/cart" class="cart">
 			<svg viewBox="0 0 120 120">
 				<path
 					d="M.6 12h12.27l2.917 5.844L34.74 57.277l-8.181 14.957C22.185 80.231 27.962 90 37.065 90h71.744V78H37.065l6.563-12H91.31a5.99 5.99 0 0 0 5.236-3.086l23.293-42c2.218-3.999-.669-8.914-5.236-8.914h-88.34l-4.058-8.13C21.021 1.498 18.602 0 15.955 0H.6v12zM49 108c0 6.627-5.373 12-12 12s-12-5.373-12-12 5.373-12 12-12 12 5.373 12 12zm60 0c0 6.627-5.373 12-12 12s-12-5.373-12-12 5.373-12 12-12 12 5.373 12 12z"
@@ -83,6 +83,7 @@
 </section>
 
 <style lang="scss">
+	@import "../variables.scss";
 	a {
 		text-decoration: none;
 		color: var(--fg-00);
@@ -178,8 +179,8 @@
 		}
 	}
 	.menu-title {
-		margin-top: 0;
-		padding-left: 1rem;
+		margin-block: 0 1rem;
+		padding-inline: 1rem;
 	}
 	.nav-bottom {
 		display: flex;
@@ -204,5 +205,10 @@
 		flex-direction: column;
 		gap: 1rem;
 		user-select: none;
+	}
+	@media (max-width: $small) {
+		main {
+			padding-inline: 1rem;
+		}
 	}
 </style>

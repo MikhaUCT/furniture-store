@@ -6,17 +6,26 @@
 	box-sizing: border-box;
 }
 
+*::selection {
+	background-color: var(--accent-00);
+	color: var(--bg-01);
+}
+
 :root {
 	font-size: 62.5%;
 	height: 100vh;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	/* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+	font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 
 	--bg-00: #1C1B22;
 	--bg-01: #23222B;
 	--fg-00: #FFFFFF;
 
+	--gold: #FBB600;
+	--trans: 0.1s ease-in-out;
 	--border-radius: 0.25rem;
 	background-color: var(--bg-00);
+	user-select: var(--accent-00);
 	color: var(--fg-00);
 }
 
@@ -29,7 +38,6 @@
 	--fg-02: #c2c2c2;
 	--fg-03: #EAEAEA;
 	--red: #eb4e4e;
-	--gold: #FBB600;
 	--accent-00: teal;
 	--shadow: 0 0 0.3rem #0004;
 }
@@ -44,6 +52,16 @@ body {
 	grid-template-rows: 10rem 1fr;
 }
 
+input {
+	background-color: inherit;
+	color: inherit;
+	font-size: inherit;
+	font-family: inherit;
+	border: solid 1px var(--fg-00);
+	border-radius: var(--border-radius);
+	user-select: inherit;
+}
+
 textarea {
 	background-color: inherit;
 	color: inherit;
@@ -53,7 +71,6 @@ textarea {
 }
 
 .btn-primary {
-	--trans: 0.1s ease-in-out;
 	cursor: pointer;
 	border: solid 0.2rem;
 	padding-block: 1rem;
@@ -103,13 +120,6 @@ textarea {
 	width: 80%;
 }
 
-aside {
-	height: fit-content;
-	min-height: 90vh;
-	position: sticky;
-	top: 1rem;
-}
-
 .products {
 	display: flex;
 	flex-wrap: wrap;
@@ -120,4 +130,9 @@ aside {
 .page-label {
 	margin-block: 0 1rem;
 	text-align: center;
+}
+
+.aside-menu {
+	@extend .card;
+	padding: 2.5rem;
 }

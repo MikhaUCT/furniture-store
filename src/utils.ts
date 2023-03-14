@@ -1,9 +1,22 @@
 import { base } from "$app/paths";
 
-class UUIDGenerator {
-	static #index = 10000;
-	static next() {
-		return `${(++UUIDGenerator.#index).toString(32)}`;
+export class UUIDGenerator {
+	static #instances = 10000;
+	#prefix: string;
+	#suffix: string;
+	#index: number;
+	#global_index: number;
+	constructor(prefix: string = "", suffix: string = "") {
+		this.#prefix = prefix;
+		this.#suffix = suffix;
+		this.#global_index = UUIDGenerator.#instances++;
+		this.#index = 0;
+	}
+	next() {
+		return this.#prefix +
+			(this.#global_index).toString(32) +
+			(this.#index++).toString(32) +
+			this.#suffix;
 	}
 }
 
@@ -64,11 +77,13 @@ class SearchTrie<T> {
 }
 
 export class Product {
+	static #IDGenerator = new UUIDGenerator("p-");
 	static nameTrie = new SearchTrie<Product>();
 	static #products: Map<string, Product> = new Map<string, Product>();
 	name: string;
 	id: string;
 	price: number;
+	/** The quantity of this item currently in stock (the max that can be purchased) */
 	stock: number;
 	description: string[];
 	image: string;
@@ -88,7 +103,7 @@ export class Product {
 		for (const category of categories) {
 			Categories[category].add(this);
 		}
-		this.id = UUIDGenerator.next();
+		this.id = Product.#IDGenerator.next();
 		Product.#products.set(this.id, this);
 
 		const words = name.split(/\s+/);
@@ -144,4 +159,22 @@ export function Review(rating: number, username: string, comment?: string): Revi
 		rating,
 		username,
 	};
+}
+
+/**
+ *
+ * @param num The number to format
+ * @param sections The number of digits between each space
+ * @param minChars The minimum width of the result
+ * @param fillChar The character to use to fill the result to the minimum width
+ */
+export function formatNumber(num: number | string, sections: number = 3, minChars: number = 0, fillChar: string = "-"): string {
+	const result = [];
+	let str = num.toString();
+	str += fillChar.repeat(Math.max(0, minChars - str.length));
+	for (let i = 0; i < str.length; ++i) {
+		if (i % sections === 0 && i !== 0) result.unshift(" ");
+		result.unshift(str[str.length - 1 - i]);
+	}
+	return result.join("");
 }

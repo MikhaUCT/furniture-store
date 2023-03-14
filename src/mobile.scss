@@ -1,3 +1,5 @@
+@import "variables";
+
 .ellipse-overflow {
 	box-orient: vertical;
 	-webkit-box-orient: vertical;
@@ -7,14 +9,14 @@
 	overflow: hidden;
 }
 
-@media (min-width: 760px) {
+@media (min-width: $medium) {
 	.show-at-medium {
 		display: none !important;
 	}
 }
 
 
-@media (max-width: 760px) {
+@media (max-width: $medium) {
 	.revert-grid-at-medium {
 		grid-template-columns: 1fr !important;
 	}
@@ -24,13 +26,13 @@
 	}
 }
 
-@media (min-width: 480px) {
+@media (min-width: $small) {
 	.show-at-small {
 		display: none !important;
 	}
 }
 
-@media (max-width: 480px) {
+@media (max-width: $small) {
 	.revert-grid-at-small {
 		grid-template-columns: 1fr !important;
 	}

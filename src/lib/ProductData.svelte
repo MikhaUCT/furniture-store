@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Product } from "../utils";
+	import { formatNumber, type Product } from "../utils";
 	import AddToCart from "./AddToCart.svelte";
 	import Rating from "./Rating.svelte";
 	import ReviewSummary from "./ReviewSummary.svelte";
@@ -29,9 +29,9 @@
 			<h2 class="hide-at-medium">{product.name}</h2>
 			<h3 class="show-at-medium">{product.name}</h3>
 			<Rating rating={product.getRating()} reviewCount={product.reviews.length} />
-			<h3 class="hide-at-medium">R{product.price}</h3>
-			<h4 class="show-at-medium">R{product.price}</h4>
-			<div class="stock">{product.stock} In Stock</div>
+			<h3 class="hide-at-medium">R{formatNumber(product.price)}</h3>
+			<h4 class="show-at-medium">R{formatNumber(product.price)}</h4>
+			<div class="stock">{formatNumber(product.stock)} In Stock</div>
 		</div>
 		<AddToCart {product} />
 	</div>
